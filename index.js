@@ -2,6 +2,7 @@ import print from "./readfile/index.js";
 import write from "./writefile/index.js";
 import compareFizeSizes from "./compareFileSizes/index.js";
 import move from "./move/index.js";
+import getDirectorySize from "./getDirectorySize/getDirectorySize.js";
 
 // print('./readfile/hi.txt');
 
@@ -18,10 +19,17 @@ import move from "./move/index.js";
 //     console.log(ans)
 // })
 
-move('./compareFileSizes/file1.txt', './compareFileSizes/file4.txt', (err) => {
-    if (error) {
-        console.log('oops');
-        return;
-      }
-      console.log('yes!')
+// move('./compareFileSizes/file1.txt', './compareFileSizes/file4.txt', (err) => {
+//     if (error) {
+//         console.log('oops');
+//         return;
+//       }
+//       console.log('yes!')
+// })
+
+getDirectorySize('./compareFileSizes', (err, size) => {
+  if (err) {
+    throw err
+  }
+  console.log(size)
 })
