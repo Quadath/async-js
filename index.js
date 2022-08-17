@@ -1,3 +1,4 @@
+import unionFiles from "./unionFiles/unionFiles.js";
 import print from "./readfile/index.js";
 import write from "./writefile/index.js";
 import compareFizeSizes from "./compareFileSizes/index.js";
@@ -35,4 +36,6 @@ import createFileDoesntExist from "./createFileDoesntExist/createFileDoesntExist
 //   console.log(size)
 // })
 
-createFileDoesntExist('./', 'file.txt')
+// createFileDoesntExist('./', 'file.txt')
+
+unionFiles('./unionFiles/input1.txt', './unionFiles/input2.txt', './unionFiles/output.txt');
