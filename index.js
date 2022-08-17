@@ -3,6 +3,7 @@ import write from "./writefile/index.js";
 import compareFizeSizes from "./compareFileSizes/index.js";
 import move from "./move/index.js";
 import getDirectorySize from "./getDirectorySize/getDirectorySize.js";
+import createFileDoesntExist from "./createFileDoesntExist/createFileDoesntExist.js";
 
 // print('./readfile/hi.txt');
 
@@ -27,9 +28,11 @@ import getDirectorySize from "./getDirectorySize/getDirectorySize.js";
 //       console.log('yes!')
 // })
 
-getDirectorySize('./compareFileSizes', (err, size) => {
-  if (err) {
-    throw err
-  }
-  console.log(size)
-})
+// getDirectorySize('./', (err, size) => {
+//   if (err) {
+//     throw err
+//   }
+//   console.log(size)
+// })
+
+createFileDoesntExist('./', 'file.txt')
